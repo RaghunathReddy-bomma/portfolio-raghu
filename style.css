@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at center, #0f0f0f, #000);
+  color: #00ffff;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+}
+
+header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  text-align: left;
+}
+
+.logo {
+  width: 60px;
+  border-radius: 50%;
+}
+
+nav button {
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+canvas {
+  display: block;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background: #111;
+  margin: 10% auto;
+  padding: 20px;
+  border: 2px solid #00ffff;
+  width: 80%;
+  color: #00ffff;
+  text-align: center;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Contact Form */
+#contact {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ffff;
+  padding: 20px;
+  width: 300px;
+  color: #00ffff;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+#contact input, #contact textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  background: #000;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+}
+
+#contact button {
+  width: 100%;
+  padding: 10px;
+  background: #00ffff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+/* Loading Screen */
+#loadingScreen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #000;
+  color: #00ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  font-size: 1.5em;
+}
+
+.spinner {
+  border: 5px solid #00ffff;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  width: 50px; height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
