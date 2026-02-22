@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raghunath's 3D Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loadingScreen">
+    <div class="spinner"></div>
+    <p>Initializing 3D Portfolio...</p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <h1>Welcome to My 3D Portfolio</h1>
+    <nav>
+      <button onclick="navigate('websites')">Websites</button>
+      <button onclick="navigate('designs')">Designs</button>
+      <button onclick="navigate('code')">Code Projects</button>
+    </nav>
+  </header>
+
+  <!-- Canvas -->
+  <main>
+    <canvas id="portfolioCanvas"></canvas>
+  </main>
+
+  <!-- Project Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <a id="modalLink" href="#" target="_blank">View Project</a>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
